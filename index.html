@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Omkar Awalegaonkar Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Omkar Awalegaonkar</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#certification-section" class="nav-link"><span>Certifications</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/Omkar_image.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Omkar Awalegaonkar</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Learner  ',
+						'Analyst  ',
+						'Problem Solver   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Junior Data Analyst</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/omkar-awalegaonkar/" class="btn btn-primary py-3 px-4">Linkedin</a> 
+							<a href="https://github.com/omkar200134" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/Omkar_cropped_image.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Omkar Awalegaonkar</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Junior Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>4 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Thane, Maharashtra, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>EXCEL</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Google Sheets</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Tableau</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Detail‑oriented Data Analyst with an M.Sc. in Computer Science and hands‑on experience in ETL, data cleaning, and interactive dashboard development. Proficient in SQL, Power BI, Google Sheets, EXCEL, Python, Tableau,  machine learning techniques (SMOTE)
+								. Proven ability to translate complex data into clear, actionable recommendations—backed by projects in customer churn prediction and sales analytics—seeking to leverage analytical expertise in an entry‑level Data Analyst role.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Human Resource, Retail, Ecommerce, &amp; Digital Marketing</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master's degree in Computer Science</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Excel, Cognos &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span> Advance Excel, Google Sheets, Python, SQL &amp; MYSQL </span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Watching and Analyzing Sports </span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="4">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/omkar-awalegaonkar/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Detail-oriented Data Analyst with hands-on experience in building interactive dashboards, automating data workflows, and delivering actionable insights using SQL, Python, Power BI, Excel, Tableau and Google Sheets. Successfully implemented end-to-end data projects, including churn prediction and sales analysis, improving decision-making and operational efficiency across platforms.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-2025</span>
+						<h2>Data Analyst</h2>
+						<span class="position">Talent Corner HR Services Pvt Ltd</span>
+						<p class="mt-4">Founded in 2002 by a three‑person team, Talent Corner HR Services now employs 200+ professionals across 15+ locations and serves 900+ clients with technology‑driven recruitment solutions 
+							<ul>
+								<li>Collaborated with the recruitment team to lead market research and build a Candidate Data Management System—driving ~100% traffic growth and a 30% YoY conversion lift through seamless data integration and feature enhancements.</li>
+
+								<li>Automated end‑to‑end data cleaning and scheduling in Excel/Google Sheets—standardizing formats, removing duplicates, and enabling self‑updating preprocessing without manual effort.</li>
+								<li>Built a full‑stack Candidate Management System with a React/Node.js, dashboard that auto‑fetches live metrics (cutting report time by 85%) and delivered dashboard's using Power BI & Excel, boosting placement speed by 25%.</li>
+
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2025</span>
+    					<h2>Master's in Computer Science</h2>
+    					<span class="position">Somaiya Vidyavihar University</span>
+    					<p class="mt-4">Grade: A+</p>
+						<p class="mt-4">CGPA: 9.03 </p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2023</span>
+    					<h2>Bachelor's in Computer Science</h2>
+    					<span class="position">Mumbai University</span>
+    					<p class="mt-4">Grade: A</p>
+						<p class="mt-4">CGPA: 8.90 </p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/drive/folders/1DPMibm5u50EseVQ36Cpkg79046hFX11V?usp=drive_link" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/omkar200134/Customer-Churn-Prediction-using-ML" class="block-20 zoom-effect" style="background-image: url('images/Customer_Churn_pic.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/omkar200134/Customer-Churn-Prediction-using-M">Customer Churn Predictor using ML</a></h3>
+                <p>Preprocessed bank dataset in Excel, performing data cleaning, normalization, and feature engineering to ensure high-quality inputs.
+
+				Addressed class imbalance with SMOTE resampling, generating synthetic minority samples for robust model training.
+
+				Tuned and trained an XGBoost classifier.
+
+				Evaluated performance on a hold‑out set, achieving 97% accuracy and a 0.98 AUC for reliable credit risk prediction.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/omkar200134/Candidate-Data-management-System" class="block-20 zoom-effect" style="background-image: url('images/omkar_proj2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/omkar200134/Candidate-Data-management-System">Candidate Data Management System</a></h3>
+                <p>I developed a streamlined data import routine that cleansed and standardized candidate information—pruning extraneous fields—then used the refined data to send personalized emails with Firebase‑token‑protected forms to prevent duplicates, automated scoring of timed MCQ assessments to surface the top five candidates, and built a dynamic React dashboard to visualize real‑time metrics and trends for data‑driven hiring decisions.
+				</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+	<br>
+		
+		 </div>
+	  </div>
+    </section>
+
+	<!-- Section for certification-->
+	 <section class="ftco-section" id="certification-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certifications</h1>
+            <h2 class="mb-4">Certifications</h2>
+            <p>Below are the certifications I have earned in SQL, Power BI, Data Analysis, Excel, &amp; Tableau.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.udemy.com/certificate/UC-34ba05f4-33b1-4cc8-968d-2c02af350c57/" class="block-20 zoom-effect" style="background-image: url('images/SQL_Certificate.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.udemy.com/certificate/UC-34ba05f4-33b1-4cc8-968d-2c02af350c57/">SQL Bootcamp - MYSQL for Beginner to Advanced</a></h3>
+                <p>Mastered writing and optimizing SQL queries for efficient data extraction, transformation, and reporting.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.udemy.com/certificate/UC-f903df1d-ec4c-4bcd-ba8d-498c2216fb56/" class="block-20 zoom-effect" style="background-image: url('images/powerbi_certificate.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://www.udemy.com/certificate/UC-f903df1d-ec4c-4bcd-ba8d-498c2216fb56/">Master Microsoft Power BI in 21 days</a></h3>
+                <p>Completed the “Master Microsoft Power BI in 21 Days” course, applying Power BI to real‑world data analytics and business intelligence use cases.</p>
+              </div>
+            </div>
+          </div>
+
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://drive.google.com/file/d/1_pjd0Gk637sDfr66lJ5u2nueombfYFMT/view?usp=sharing" class="block-20 zoom-effect" style="background-image: url('images/Tableau_certification.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://drive.google.com/file/d/1_pjd0Gk637sDfr66lJ5u2nueombfYFMT/view?usp=sharing">Unlock Data Insights with Tableau</a></h3>
+                <p>Completed the “Unlock Data Insights with Tableau” workshop, leveraging Tableau’s capabilities to create interactive visualizations, uncover actionable insights, and support data‑driven decision‑making.</p>
+              </div>
+            </div>
+          </div>
+
+		  
+          
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://www.udemy.com/certificate/UC-c7497273-bb09-47fc-80d8-8b8daa058315/" class="block-20 zoom-effect" style="background-image: url('images/Microsoft\ Excel\ Certificate.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://www.udemy.com/certificate/UC-c7497273-bb09-47fc-80d8-8b8daa058315/">Microsoft Excel: Advanced Excel Formulas and Functions</a></h3>
+				  <p>Completed the “Microsoft Excel: Advanced Excel Formulas and Functions” course, gaining hands-on experience with powerful functions such as VLOOKUP, INDEX-MATCH, IF statements, and nested formulas. Learned to automate data tasks, perform complex analysis, and improve spreadsheet efficiency for business and data-related decision-making.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://www.coursera.org/account/accomplishments/verify/VF7CUXPX09KE" class="block-20 zoom-effect" style="background-image: url('images/Visualization.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://www.coursera.org/account/accomplishments/verify/VF7CUXPX09KE">Data Visualization and Dashboards with Excel and Cognos</a></h3>
+				  <p>Completed the “Data Visualization and Dashboards with Excel and Cognos” program, leveraging both tools to design actionable dashboards and impactful visualizations.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/drive/folders/1-4IOVtizbUtGcFO8KXSgspxoEfjwjG0g?usp=drive_link" class="btn btn-primary py-4 px-5">Other Certification's</a></p>
+    			</div>
+    		</div>
+	  </div>
+	  
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="4">0</strong>
+                <span>Experience(in Months)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Major Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <span style="display: inline-flex; align-items: center;">
+  				<strong class="number" data-number="8">0</strong> <span style="font-size: 1.5em;">&nbsp;+</span>
+					</span>
+
+				
+                <span>Certifications Earned </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>Project's source code on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/omkar200134" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Thane, Maharashtra, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://9326244077">+91 9326244077</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:awalegaonkaromkar355@gmail.com">awalegaonkaromkar355@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1EuvLD6wJmAd5BfONqrpugjAUIgi82Zcb/view?usp=drive_link">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/omkar-awalegaonkar/"><span class="icon-linkedin"></span></a></li>  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/omkarawalegaonkar/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+
+  <script>
+  $(document).ready(function () {
+    $('.navbar-nav .nav-link').on('click', function () {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
+</script>
+<script>
+	$(document).ready(function() {
+    // If you're initializing the carousel manually, use this configuration:
+    $('.home-slider.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: true,
+        // Disable touch and mouse drag
+        touchDrag: false,
+        mouseDrag: false,
+        pullDrag: false,
+        // Disable touch events
+        touch: false,
+        // Disable mouse events
+        mouse: false,
+        // Disable responsive touch
+        responsiveTouch: false
+    });
+});
+
+// Alternative: If the carousel is already initialized, you can destroy and reinitialize:
+$(document).ready(function() {
+    // Destroy existing carousel
+    $('.home-slider.owl-carousel').trigger('destroy.owl.carousel');
+    
+    // Reinitialize with touch disabled
+    $('.home-slider.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        touchDrag: false,
+        mouseDrag: false,
+        pullDrag: false,
+        touch: false,
+        mouse: false,
+        responsiveTouch: false
+    });
+});
+</script>
+    
+  </body>
+</html>
